@@ -1,118 +1,240 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Averyanov M</title>
-    <link href="MySocialLink.css" rel="stylesheet" />
-  </head>
-  <body>
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-    <div class="container">
-      <div class="info">
-        <img src="Averyanov.jpg" width="200" alt="Photo Averyanov" class="avatar">
+/* * {
+    padding: 0;
+    margin: 0;
+} */
 
-        <div class="info-text">
-          <h1>Аверьянов Максим</h1>
-          <p>Я <strong>начинаю</strong>  путь разработчика <em>прямо сейчас </em></p>
-          <p>Люблю заниматься спортом</p>
+body {
+    background-color: #f1f1f1;
+    color: #0f141e;
 
-          <h4><strong>Мои социальные сети:</strong> </h4>
-          <p> <a href="https://vk.com/averyanov_76">VK</a> |
-              <a href="https://instagram">Instagram</a>   |
-              <a href="https://telegram">Telegram</a>
-          </p>
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'Roboto', sans-serif;
 
-        </div>
-        
-      </div>
+    /* font: normal 16px 'Roboto', sans-serif; */
 
-      <div class="card bg-yellow">
-        <h2>Мои хобби</h2>
-        <ol class="list">
-            <li>Программирование</li>
-            <li>Работать над самим собой</li>  
-            <li>Мини-футбол, фитнес</li>
-        </ol>
-      </div>
+    /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+}
 
-      
-      <div class="card bg-green">
-        <h2>Опыт работы</h2>
-        <table class="table">
-          <tr>
-            <td>ООО ГазпромТрансгазУфа</td>
-            <td>Слесарь КИПиА 5 разряда</td>
-            <td>2019 - 2020</td>
-          </tr>
-          <tr>
-            <td>ПАО АНК Башнефть</td>
-            <td>Машинист техн насосов</td>
-            <td>2020 - 2022</td>
-          </tr>
-          <tr>
-            <td>ПАО АНК Башнефть</td>
-            <td>Оператор техн установок</td>
-            <td>2022 - now</td>
-          </tr>
-        </table>
-      </div>
+a {
+    color: black;
+    text-decoration: none;    
+    transition: color .2s linear;
+    margin: 0 10 0 0;
+}
 
-    
-      <div class="card bg-red">
-        <h2>Мои первые проекты</h2>
-        <ul class="link-list">
-          <li>
-            <a href="https://averyanov76.github.io/Project-1-FutsalKeepersCards/">Project 1 | KeeperCards</a>
-          </li>
-          <li>
-            <a href="https://averyanov76.github.io/Project-2-Drag-Drob/">Project 2 | Drag&Drob</a>
-          </li>
-          <li>
-            <a href="https://averyanov76.github.io/Project-3-Slider/">Project 3 | Slider</a>
-          </li>
-          <li>
-            <a href="https://averyanov76.github.io/Project-4-Board/">Project 4 | Board</a>
-          </li>
-          <li>
-            <a href="https://averyanov76.github.io/Project-5-AIM-game/">Project 5 | AIM game</a>
-          </li>
-        </ul>
-      </div>
+a:hover {
+    color: rgb(0, 253, 253);
+    text-decoration: underline;
+}
 
-      <div class="contact">
-        <h2>Связаться со мной</h2>
+a:active {
+    color: blue;
+}
 
-        <form action="/">
-          <div class="row">
-            <div class="form-group">
-              <label for="name">Ваше имя:</label>
-              <input type="text" id="name" placeholder="Введите ваше имя...">
-            </div>
+.avatar {
+    width: 200px;
+    border-radius: 50px;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);
+}
 
-            <div class="form-group">
-              <label for="email">Ваш email:</label>
-              <input type="email" id="email" placeholder="Введите email...">
-            </div>
-          </div>
-          
-          <div class="form-group">
-            <label for="text">Вашe сообщение:</label>
-            
-            <textarea id="text" rows="2" cols="15"></textarea>
-          </div>
-
-          <input class="btn" type="submit" value="Связаться!">
-        </form>
-      </div>
+.info {
+    display: flex;
+    margin-bottom: 20px;
+}
 
 
-      <div class="position">
-        <div class="box"></div>
-      </div>
-    </div>
+@media (max-width: 700px) {
+    .info {
+        text-align: center;
+        display: block;
+    }
+}
 
-    
 
-    <div style="margin-bottom: 500px;"></div>
-  </body>
-</html>
+.info-text {
+    margin-left: 40px;
+}
+
+.info-text h4 {
+    margin-bottom: 10px;
+}
+
+.info p {
+    color: #86898f;
+    margin: 0;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    /* letter-spacing: 5px; */
+    /* word-spacing: 42px; */
+}
+
+/* Box Model */
+.container {
+    max-width: 750px;
+    margin: auto;
+    padding-top: 30px;
+}
+
+/* .social {
+    background: green;
+    padding: 15px;
+    padding: 15px 40px;
+    padding: 15px 20px 25px 30px;
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 25px;
+    padding-left: 30px;
+    margin: 5px;
+
+    border: 5px solid red;
+    border-bottom-style: dotted;
+    border-top-width: 15px;
+    border-right-color: blue;
+} */
+
+/* .box-model > div {
+    float: left;
+    background: #000;
+    height: 200px;
+    border: 4px solid red;
+    width: 25%;
+    box-sizing: border-box;
+} */
+
+.bg-yellow {
+    background: #f8df0060;
+}
+
+.bg-green {
+    background: #02ff175d;
+}
+
+.bg-red {
+    background: #03c7f849;
+}
+
+.card {
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.list {
+    padding: 0 20px;
+}
+
+.list li {
+    color: #86898f;
+    margin-bottom: 10px;
+}
+
+.table {
+    width: 100%;
+}
+
+.table td {
+    padding-bottom: 10px;
+}
+
+.table td:nth-child(2), 
+.table td:nth-child(3) {
+    color: #86898f;
+}
+
+/* .table tr:nth-child(odd) {
+  background: red;
+} */
+
+.link-list {
+    list-style: none;
+    padding: 0;
+}
+
+.link-list li {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.contact h2 {
+    text-align: center;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #86898f;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #ccc;
+    color: #000;
+    padding: 15px 0 10px;
+    outline: none;
+    font-family: inherit;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.row > .form-group {
+    width: 50%;
+    margin-right: 20px;
+}
+
+.row > .form-group:last-child {
+    margin-right: 0;
+}
+
+.btn {
+    background: #111;
+    padding: 15px 50px;
+    color: #fff;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    background: rgba(1, 252, 189, 0.658);
+    color: #000;
+    transition: color .3s linear;
+
+}
+
+/* Position */
+
+/* .position {
+    position: relative;
+    border: 4px solid black;
+    margin-top: 40px;
+    padding: 20px;
+    height: 300px;
+}
+
+.box {
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 50px;
+    background:lightcoral;
+} */
